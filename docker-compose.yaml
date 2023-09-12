@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  backend:
+    build: ./app
+    environment:
+      - BOT_TOKEN=secret
+      - OPENAI_TOKEN=secret
+    volumes:
+      - ./app:/app
+    command: python src/main.py
